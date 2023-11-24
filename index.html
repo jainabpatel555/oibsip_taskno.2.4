@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Login and Registration System</h1>
+
+        <div id="formToggle" onclick="toggleForm()">Don't have an account? Register here.</div>
+
+        <!-- Login Form -->
+        <form id="loginForm" style="display: block;" onsubmit="return login()">
+            <div class="item">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter Your Username" autocomplete="off" required>
+            </div>
+
+            <div class="item">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter Your Password" autocomplete="off" required>
+            </div>
+
+            <input type="submit" id="loginBtn" value="Login">
+        </form>
+
+        <!-- Registration Form -->
+        <form id="registrationForm" style="display: none;" onsubmit="return register()">
+            <div class="item">
+                <label for="registerUsername">Username</label>
+                <input type="text" id="registerUsername" name="registerUsername" placeholder="Choose a Username" autocomplete="off" required>
+            </div>
+
+            <div class="item">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="registerPassword" placeholder="Choose a Password" autocomplete="off" required>
+            </div>
+
+            <input type="submit" id="registerBtn" value="Register">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
